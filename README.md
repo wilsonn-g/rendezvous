@@ -4,7 +4,7 @@
 
 To get you **off** your phone and face-to-face with your friends. 
 
-Our project for CPEN 321 - Software Engineering at UBC
+Our project for CPEN 321 - Software Engineering at UBC. Finished in top 5.
 
 <img src="https://github.com/mebesius/rendezvous/blob/master/screenshots/login-register.png" width=200 align=left>
 <img src="https://github.com/mebesius/rendezvous/blob/master/screenshots/activity-finder.png" width=200 align=left/>
@@ -24,7 +24,3 @@ To emulate the app on a virtual device, you will need to pick where the **API Le
 ## Back-End
 
 NodeJS, Express, AWS
-
-### Back-End Setup
-
-Make sure to **not** expose any API keys (not sure if this is relevant since the repo is private but it is general good practice anyways, especially if you end up working on open-source software.)
