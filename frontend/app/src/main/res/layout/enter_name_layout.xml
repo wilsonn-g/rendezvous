@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <com.rengwuxian.materialedittext.MaterialEditText
+       android:id="@+id/edit_first_name"
+       android:layout_marginTop="32dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:drawableStart="@drawable/register_icon_foreground"
+       android:drawableLeft="@drawable/register_icon_foreground"
+       android:drawablePadding="5dp"
+       android:hint="@string/first_name"
+       android:inputType="text"
+       app:met_baseColor="@android:color/black"
+       app:met_primaryColor="@android:color/white"
+       app:met_textColorHint="#000000" />
+
+   <com.rengwuxian.materialedittext.MaterialEditText
+       android:id="@+id/edit_last_name"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:drawableStart="@drawable/register_icon_foreground"
+       android:drawableLeft="@drawable/register_icon_foreground"
+       android:drawablePadding="5dp"
+       android:hint="@string/last_name"
+       android:inputType="text"
+       app:met_baseColor="@android:color/black"
+       app:met_primaryColor="@android:color/white"
+       app:met_textColorHint="#000000" />
+</LinearLayout>
+
+
+

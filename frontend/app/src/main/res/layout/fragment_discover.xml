@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_margin="16dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/image_activity"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+            <!--android:src="@drawable/scandinavia"-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/text_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-4dp"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp" />
+
+                <!--TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-4dp"
+
+                    android:text="@string/location"
+                    android:textColor="@color/gray_medium" /-->
+
+                <TextView
+                    android:id="@+id/text_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_medium" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/refresh"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_round"
+            android:contentDescription="@string/content_description_dismiss"
+            android:elevation="4dp"
+            app:srcCompat="@drawable/refresh_button"
+            android:theme="@style/PrimaryFlatButton" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25" />
+
+        <ImageButton
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/dismiss"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_round"
+            android:elevation="4dp"
+            app:srcCompat="@drawable/dismiss_button"
+            android:theme="@style/PrimaryFlatButton"
+            android:contentDescription="@string/content_description_dismiss" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25" />
+
+        <ImageButton
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/super_like"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_round"
+            android:elevation="4dp"
+            app:srcCompat="@drawable/super_like_button"
+            android:theme="@style/PrimaryFlatButton"
+            android:contentDescription="@string/content_description_super_like"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25" />
+
+        <ImageButton
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/like"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_round"
+            android:elevation="4dp"
+            app:srcCompat="@drawable/like_button"
+            android:theme="@style/PrimaryFlatButton"
+            android:contentDescription="@string/content_description_like"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

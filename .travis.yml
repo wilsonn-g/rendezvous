@@ -1,0 +1,62 @@
+# safelist
+branches:
+  only:
+  - master
+env:
+  global:
+  - ANDROID_API_LEVEL=26
+  - ANDROID_EMULATOR_LEVEL=26
+  - ANDROID_BUILD_TOOLS_VERSION=26.0.2
+  - ANDROID_ABI=armeabi-v7a
+  - ADB_INSTALL_TIMEOUT=20
+  
+matrix:
+  include:
+    - language: android
+      dist: trusty
+      sudo: false
+      before_script:
+       - adb wait-for-device
+       - adb shell input keyevent 82 &
+      script:
+        - ./gradlew clean build
+        - ./gradlew connectedCheck
+      before_install:
+       - cd frontend
+       - chmod +x gradlew
+         # Install the rest of tools (e.g.avdmanager)
+       - touch ~/.android/repositories.cfg
+       - yes | sdkmanager "platforms;android-26"
+       - yes | sdkmanager "build-tools;26.0.2"
+       - export PATH=$PATH:$HOME/android/sdk/tools:$HOME/android/sdk/tools/bin/avdmanager
+       - echo no | avdmanager create avd --force -n test -t android-26 --abi armeabi-v7a -c 100M
+       - emulator -avd test -no-audio -no-window &
+      android:
+        components:
+          # The BuildTools version used by your project
+          - tools
+          # The SDK version used to compile your project
+          - platform-tools
+          - tools
+          - android-26
+          # Additional components
+          - extra-android-m2repository
+          - extra-google-google_play_services
+          - android-$ANDROID_EMULATOR_LEVEL
+          - sys-img-armeabi-v7a-android-26
+          - sys-img-x86-android-26
+          # Specify at least one system image,
+        # Emulator Management: Create, Start and Wait
+        licenses:
+          - 'android-sdk-preview-license-52d11cd2'
+          - 'android-sdk-license-.+'
+          - 'google-gdk-license-.+'
+    - language: node_js
+      node_js:
+        - 12
+      services:
+        - mongodb
+      script:
+        - cd backend
+        - npm update
+        - npm test

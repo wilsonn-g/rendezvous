@@ -1,0 +1,36 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serverStart": "nodemon server.js",
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.7.0",
+    "firebase-mock": "^2.2.10",
+    "https": "^1.0.0",
+    "mongoose": "^5.7.7",
+    "socket.io": "^2.3.0",
+    "socket.io-mock": "^1.2.3"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^1.1.3",
+    "dotenv": "^8.2.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2"
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Suggest"
+        android:id="@+id/suggest"
+        app:showAsAction="never"/>
+    <item
+        android:title="Add members"
+        android:id="@+id/add_members"
+        app:showAsAction="never"/>
+    <item
+        android:title="Leave"
+        android:id="@+id/leave"
+        app:showAsAction="never"/>
+    <item
+        android:title="See members"
+        android:id="@+id/see_members"
+        app:showAsAction="never"/>
+    <item
+        android:title="Back"
+        android:id="@+id/back"
+        app:showAsAction="ifRoom"/>
+
+
+
+</menu>
